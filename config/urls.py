@@ -13,7 +13,7 @@ urlpatterns = [
         name="about",
     ),
 
-    path('api/v1/', include('config.api.v1')),
+    path('api/v1/', include('config.api.v1', namespace='v1', )),
 
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),

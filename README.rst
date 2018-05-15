@@ -11,6 +11,18 @@ Behold My Awesome Project!
 :License: MIT
 
 
+Design Choices
+--------------
+
+I used Cookiecutter-Django to bootstrap this project because it envelopes most of the good practices right out of the box.
+
+I used Django-REST-Framework to create RESTful API. Features: Limit/Offset pagination, django-filter based filtering.
+
+I used feedparser to parse RSS feeds and put them into db.
+
+TODOs: parallelize RSS parsing, patch django-celery-beat for Django2.0, more API url routes (like /rates/<date>/), optimizations, integration tests, better permissions.
+
+
 Settings
 --------
 
