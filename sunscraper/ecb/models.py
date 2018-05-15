@@ -11,6 +11,9 @@ class Currency(models.Model):
         verbose_name = 'curency'
         verbose_name_plural = 'currencies'
 
+    def __str__(self):
+        return self.code
+
 
 class Rate(models.Model):
     currency = models.ForeignKey(Currency, on_delete=models.CASCADE)
@@ -21,3 +24,6 @@ class Rate(models.Model):
         indexes = (
             BrinIndex(fields=['date']),
         )
+
+    def __str__(self):
+        return f"Rate for {self.currency} on {self.date}"

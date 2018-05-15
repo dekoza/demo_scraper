@@ -67,11 +67,11 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
+    'django_filters',
 ]
 LOCAL_APPS = [
     'sunscraper.users.apps.UsersConfig',
-    'sunscraper.ecb.apps.EcbConfig',
-    # Your stuff: custom apps go here
+    'sunscraper.ecb',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -250,6 +250,11 @@ ACCOUNT_ADAPTER = 'sunscraper.users.adapters.AccountAdapter'
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = 'sunscraper.users.adapters.SocialAccountAdapter'
 
-
-# Your stuff...
+# REST Framework
 # ------------------------------------------------------------------------------
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100,
+}
