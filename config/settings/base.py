@@ -68,6 +68,7 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount',
     'rest_framework',
     'django_filters',
+    # 'django_celery_beat',
 ]
 LOCAL_APPS = [
     'sunscraper.users.apps.UsersConfig',
