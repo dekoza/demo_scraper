@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=sunscraper
+POSTGRES_USER=VMHZuSGHgHpEYCcQpsWZkBHrCfMZgLlH
+POSTGRES_PASSWORD=jRs7WHhWt23MmRt2iR3ONbVF6P2YXAvDwJVRymKxszINQh4FeYjTie0k8OPRptgw
